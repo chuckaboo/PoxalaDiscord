@@ -75,7 +75,6 @@ module.exports = {
               const champList = result.map((rune) => rune.name);
               await interaction.deleteReply();
               const channel = interaction.channel
-              console.log(channel);
 
               await interaction.followUp(
                 `:hatching_chick: ${userMention(
@@ -101,7 +100,6 @@ module.exports = {
       }
     } catch (err) {
       await interaction.followUp({ content: requestErrMsg, ephemeral: true });
-      console.log(err.message);
     }
   },
 };

@@ -20,11 +20,7 @@ module.exports = {
     const canvas = Canvas.createCanvas(width, height);
     const context = canvas.getContext("2d");
 
-
-
     const factionNum = getFactionNumber(rune.factions);
-
-    console.log(factionNum);
 
     try {
       const runeImage = await Canvas.loadImage(
@@ -76,8 +72,6 @@ module.exports = {
 
       context.font = "bold 20px Arial";
       context.fillText(rune.noraCost.toString(), 293, 50);
-
-      console.log("TYPE", type);
 
       if (type === "champs") {
         // Champ stats
@@ -177,8 +171,6 @@ module.exports = {
 
       return attachment;
     } catch (err) {
-      console.log("ERROR!");
-      console.log(err.message);
       return err;
     }
 

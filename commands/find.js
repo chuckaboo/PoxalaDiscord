@@ -136,7 +136,6 @@ module.exports = {
 
             await i.deleteReply();
           } catch (err) {
-            console.log(err.message);
             await i.followUp({ content: requestErrMsg, ephemeral: true });
           }
         });
@@ -144,7 +143,6 @@ module.exports = {
         await interaction.followUp({ content: errorAPIMsg, ephemeral: true });
       }
     } catch (err) {
-      console.log(err);
       await interaction.followUp({ content: requestErrMsg, ephemeral: true });
     }
   },

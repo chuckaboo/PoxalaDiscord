@@ -18,8 +18,6 @@ module.exports = {
 
       return attachment;
     } catch (err) {
-      console.log("ERROR!");
-      console.log(err.message);
       return err;
     }
   },

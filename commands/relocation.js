@@ -51,7 +51,6 @@ module.exports = {
         await interaction.reply({ content: noResultsMsg, ephemeral: true });
       }
     } catch (err) {
-      console.log(err);
       await interaction.reply({ content: requestErrMsg, ephemeral: true });
     }
   },
